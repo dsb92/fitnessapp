@@ -1,0 +1,42 @@
+extends layout
+
+block content
+    h1.
+        #{program[0].workoutprogram}
+        
+    a.btn.btn-default(href='/workout/#{program[0]._id}/newworkout/') Ny øvelse
+    .table-responsive
+    table.table
+        thead
+          tr
+            th #
+                     
+            th Øvelse
+                    
+            th Beskrivelse
+                     
+            th Set
+                    
+            th Gentagelser/tid
+           
+        tbody
+            each ex, i in program[0].exercises
+                tr
+                    td #{i+1}
+                             
+                    td #{ex.name}
+                             
+                    td #{ex.description}
+                            
+                    td #{ex.set}
+                            
+                    td #{ex.repeat}
+                                 
+      form(method="post",action="/workout/#{program[0]._id}/completeprogram/")
+      button.btn.btn-success(type='submit') Gennemfør
+
+
+
+
+
+    

@@ -1,0 +1,10 @@
+extends layout
+
+block content
+    h1=title
+    
+    each log, i in wolog
+        h2=log.completedprogram
+        hr
+        p Gennemført: #{log.completed} gange
+        p Sidst gennemført: #{log.lastcompleted}

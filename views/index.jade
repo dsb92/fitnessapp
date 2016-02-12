@@ -1,0 +1,17 @@
+extends layout
+
+block content
+    h1.
+        Træningsprogrammer
+    hr
+    
+    a.btn.btn-default(href='/newprogram') Ny træningsprogram
+    a.btn.btn-default(href='/workoutlog') Historik
+    
+    ul
+        each t, i in wop
+            li
+                a(href="/workout/#{t._id}")= t.workoutprogram
+
+
+    

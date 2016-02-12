@@ -1,0 +1,15 @@
+extends layout
+
+block content
+    h1=title
+    form.form-inline(method="post",action="/newprogram")
+        .form-group
+            label(for='inputName') Navn
+              
+            input#inputName.form-control(type='text', placeholder='Navn på træningsprogram', name='name')
+ 
+        button.btn.btn-default(type='submit') Tilføj
+    
+
+
+    
